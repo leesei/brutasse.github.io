@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/grid.css">
 		<link rel="stylesheet" type="text/css" href="assets/style.css">
 	</head>
-	<body data-username="leesei" data-additional="feedhq/feedhq" ng-controller="GithubController" ng-cloak>
+	<body data-username="leesei" ng-controller="GithubController" ng-cloak>
 		<div id="wrapper" class="grid clearfix">
 			<div id="main" class="grid-1">
 				<h1>
@@ -50,7 +50,7 @@
 			<ol id="repos" ng-repeat="repo in repos">
 				<li class="repo grid-1 {{ repo.language.toLowerCase() }}">
 					<a href="{{ repo.html_url }}">
-						<h2>{{ repo.name }}</h2>
+						<h2>{{ repo.name }} <span ng-if="repo.fork">⑃</span></h2>
 						<h3>{{ repo.language }}</h3>
 						<p>{{ repo.description }}</p>
 					</a>
